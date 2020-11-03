@@ -61,7 +61,7 @@ const EditProfile = ({
       youtube: loading || !profile.social ? '' : profile.social.youtube,
       instagram: loading || !profile.social ? '' : profile.social.instagram,
     });
-  }, [loading]); //When page will load, this function will run
+  }, [loading, getCurrentProfile]); //When page will load, this function will run
 
   const onChange = (e) =>
     setFormData({

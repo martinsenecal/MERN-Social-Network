@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEducation } from '../../actions/profile';
@@ -24,8 +24,6 @@ const AddEducation = ({ addEducation, history }) => {
     description,
     current,
   } = formData;
-
-  const [toDateDisabled, toggleDisabled] = useState(false);
 
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

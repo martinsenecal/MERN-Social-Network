@@ -16,7 +16,7 @@ const Dashboard = ({
 }) => {
   useEffect(() => {
     getCurrentProfile();
-  }, []); //Return only once at the first loading
+  }, [getCurrentProfile]); //Return only once at the first loading
 
   return loading && profile === null ? (
     <Spinner />
